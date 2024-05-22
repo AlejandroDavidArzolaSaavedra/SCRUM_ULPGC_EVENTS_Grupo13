@@ -1,13 +1,9 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches:
       - SprintUno
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -21,5 +17,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
-          folder: . # Aquí puedes especificar la carpeta donde se encuentra tu sitio estático
+          folder: . 
           token: ${{ secrets.GITHUB_TOKEN }}
